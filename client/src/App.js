@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from './components/Navbar'
-import Header from './components/Header'
+import HeaderSearchBar from './components/HeaderSearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap'
 import "./App.css";
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar />
-        <Header />
+        <HeaderSearchBar />
     </>
   );
 }
