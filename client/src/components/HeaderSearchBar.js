@@ -16,7 +16,7 @@ function HeaderSearchBar() {
                     <Col>
                         <h4>To start, use the search bar below.</h4>
                         <br></br>
-                        <h4>Or, click on "View Saved Books" to view already saved books</h4>
+                        <h4>Or click on "View Saved Books" to view books you have saved</h4>
                         <br></br>
                         <Navbar bg="dark" variant="dark" className="justify-content-center">
                             <Form inline>
