@@ -9,8 +9,8 @@ function NavBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                    <Nav.Link href="#/"><h3>Search For Books</h3></Nav.Link>
-                    <Nav.Link href="#portfolio"><h3>View Saved Books</h3></Nav.Link>
+                    <Nav.Link href="#/"><h4>Search For Books</h4></Nav.Link>
+                    <Nav.Link href="#portfolio"><h4>View Saved Books</h4></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
