@@ -1,0 +1,22 @@
+body {
+    background: url('../images/new-background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.view {
+    margin-left: 3px;
+}
+
+
+.container {
+    position: inherit;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #e3e3e3;
+    margin-top: 60px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 800px;
+}
