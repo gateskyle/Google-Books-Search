@@ -1,6 +1,8 @@
 import React from "react";
+import { BrowserRouter , Route } from "react-router-dom";
 import Navbar from './components/Navbar';
-import HeaderSearchBar from './components/HeaderSearchBar';
+import SearchBooks from './components/SearchBooks';
+import SavedBooks from './components/SavedBooks';
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap'
@@ -9,9 +11,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Navbar />
-      <HeaderSearchBar />
-      <Footer />
+      <BrowserRouter >
+        <Navbar />
+        <Route exact path={'/'} component={SearchBooks} />
+        <Route exact path={'/saved'} component={SavedBooks} />
+        <Footer />
+      </BrowserRouter >
     </>
   );
 }
