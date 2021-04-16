@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from '../utils/API'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SavedBooksContainers from './SaveBooksContainer'
 import './ResultContainer.css'
     
 function SavedBooks() {  
@@ -28,6 +27,7 @@ function SavedBooks() {
 
     const deleteClick = (event) => {
         event.preventDefault();
+        alert('Book deleted (Doesnt work and i dont know why)')
         console.log('deleted!', event.target.value)
         API.deleteBook(event.target.value)
         setSavedBooks(savedBooks.filter((book) => {
