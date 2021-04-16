@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from './components/Navbar'
-import HeaderSearchBar from './components/HeaderSearchBar'
-import ResultsContainer from './components/ResultContainers'
+import Navbar from './components/Navbar';
+import HeaderSearchBar from './components/HeaderSearchBar';
+import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap'
 import "./App.css";
@@ -9,9 +9,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <NavBar />
-        <HeaderSearchBar />
-        <ResultsContainer />
+      <Navbar />
+      <HeaderSearchBar />
+      <Footer />
     </>
   );
 }
