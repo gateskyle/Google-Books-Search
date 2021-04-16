@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require('./routes/books-routes');
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -27,8 +27,8 @@ app.get("*", (req, res) => {
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('connected to db!');
+  console.log('Connected to Database');
   app.listen(PORT, () => {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`🌎 ==> Server now on port ${PORT}!`);
   });
 });
