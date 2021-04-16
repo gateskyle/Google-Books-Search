@@ -15,10 +15,11 @@ router.get('/api/books', async (req, res) => {
 router.post('/api/books', async (req, res) => {
   try {
     const book = await Books.create({
+      id: req.body.id,
       title: req.body.title,
       authors: req.body.authors,
       desc: req.body.description,
-      image: req.body.image,
+      pic: req.body.image,
       link: req.body.link,
     })
     res.json(book);
