@@ -18,8 +18,8 @@ router.post('/api/books', async (req, res) => {
       id: req.body.id,
       title: req.body.title,
       authors: req.body.authors,
-      desc: req.body.description,
-      pic: req.body.image,
+      desc: req.body.desc,
+      pic: req.body.pic,
       link: req.body.link,
     })
     res.json(book);

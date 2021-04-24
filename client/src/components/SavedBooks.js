@@ -28,10 +28,10 @@ function SavedBooks() {
     const deleteClick = (event) => {
         event.preventDefault();
         alert('Book deleted (Doesnt work and i dont know why)')
-        console.log('deleted!', event.target.value)
-        API.deleteBook(event.target.value)
+        console.log('deleted!', event.target.id)
+        API.deleteBook(event.target.id)
         setSavedBooks(savedBooks.filter((book) => {
-            return book.id !== event.target.value; 
+            return book.id !== event.target.id; 
         }))
     }
 

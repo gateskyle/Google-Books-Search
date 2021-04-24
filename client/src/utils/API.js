@@ -8,6 +8,7 @@ export default {
   },
 
   save: function (data) {
+    console.log(data)
     return axios.post("/api/books", {
       id: data.id,
       title: data.title, 
@@ -17,7 +18,8 @@ export default {
       link: data.link
     })
     .then(function (response) {
-      console.log(response);
+      console.log(response)
+      console.log(response.authors)
       alert('Book Has Been Saved')
     })
     .catch(function (error) {
