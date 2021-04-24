@@ -30,7 +30,7 @@ router.post('/api/books', async (req, res) => {
 });
 
 router.delete('/api/books/:id', async (req, res) => {
-  Books.findOneAndRemove({ _id: req.params.id }, req.body, function(err, data)
+  Books.findOneAndRemove({ id: req.params.id }, req.body, function(err, data)
   {
       if(!err){
         console.log("Book Deleted");
