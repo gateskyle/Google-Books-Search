@@ -31,7 +31,7 @@ ____________________________________________
  
 ### Pictures
  
-View demo video <a href="https://drive.google.com/file/d/1kSDfzRA1I0NvZVL1FZkeuRoGLksluSEr/view?usp=sharing">Here</a><br>
+View demo video <a href="https://drive.google.com/file/d/1kSDfzRA1I0NvZVL1FZkeuRoGLksluSEr/view?usp=sharing">here</a><br>
 
 ____________________________________________
  
