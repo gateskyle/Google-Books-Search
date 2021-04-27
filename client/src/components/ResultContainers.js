@@ -5,6 +5,7 @@ import './ResultContainer.css'
     
 function ResultContainers(props) {  
 
+    //Function to save a book
     function clickID() {
         const newBook = {
             id: props.id,

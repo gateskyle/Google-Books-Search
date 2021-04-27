@@ -5,12 +5,13 @@ import './ResultContainer.css'
     
 function SavedBooks() {  
 
-    const [savedBooks, setSavedBooks] = useState([]);
+    const [booksSaved, setBooksSaved] = useState([]);
 
+    //Stores saved books to const above
     useEffect(() => {
         API.getAllBooks()
         .then((response) => {
-        let list = []    
+        let bookList = []    
         response.data.map(item => {
             list.push({
                 title: item.title,
@@ -21,21 +22,22 @@ function SavedBooks() {
                 id: item.id
             })
             })
-        setSavedBooks(list);    
+        setBooksSaved(bookList);    
         })
     }, [])
 
-    const deleteClick = (event) => {
-        event.preventDefault();
-        alert('Book deleted (Doesnt work and i dont know why)')
-        console.log('deleted!', event.target.id)
-        API.deleteBook(event.target.id)
-        setSavedBooks(savedBooks.filter((book) => {
-            return book.id !== event.target.id; 
+    // Use to find book's id and delete it
+    const deleteClick = (e) => {
+        e.preventDefault();
+        alert('Book deleted')
+        API.deleteBook(e.target.id)
+        setSavedBooks(booksSaved.filter((book) => {
+            return book.id !== e.target.id; 
         }))
     }
 
-    const RenderSavedBooks = savedBooks.map((data) => (
+    // Renders all saved books
+    const RenderSavedBooks = booksSaved.map((data) => (
         <div>
         <section className="container">
             <section className="row flex-row-reverse p-2">
@@ -69,7 +71,7 @@ function SavedBooks() {
         </div>
     ))
 
-
+    // Renders const with all saved books
     return (
         <>
         <div>

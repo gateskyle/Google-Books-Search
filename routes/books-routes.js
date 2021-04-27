@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Books = require("../models/books.js");
 
+// Gets all books based on the search
 router.get('/api/books', async (req, res) => {
   Books.find({}).then(
     (data) => {
@@ -12,6 +13,7 @@ router.get('/api/books', async (req, res) => {
     })
 });
 
+// Use to saved books
 router.post('/api/books', async (req, res) => {
   try {
     const book = await Books.create({
@@ -29,6 +31,7 @@ router.post('/api/books', async (req, res) => {
     }
 });
 
+// Route to Delete Books in Saved Books
 router.delete('/api/books/:id', async (req, res) => {
   Books.findOneAndRemove({ id: req.params.id }, req.body, function(err, data)
   {
