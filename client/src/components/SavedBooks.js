@@ -13,7 +13,7 @@ function SavedBooks() {
         .then((response) => {
         let bookList = []    
         response.data.map(item => {
-            list.push({
+            bookList.push({
                 title: item.title,
                 authors: item.authors,
                 desc: item.desc,
@@ -21,7 +21,7 @@ function SavedBooks() {
                 link: item.link,
                 id: item.id
             })
-            })
+        })
         setBooksSaved(bookList);    
         })
     }, [])
@@ -31,7 +31,7 @@ function SavedBooks() {
         e.preventDefault();
         alert('Book deleted')
         API.deleteBook(e.target.id)
-        setSavedBooks(booksSaved.filter((book) => {
+        setBooksSaved(booksSaved.filter((book) => {
             return book.id !== e.target.id; 
         }))
     }
